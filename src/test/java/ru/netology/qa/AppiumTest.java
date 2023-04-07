@@ -31,13 +31,12 @@ public class AppiumTest {
 
         driver = new AndroidDriver(remoteUrl, desiredCapabilities);
         mainScrAppium = new MainScrAppium(driver);
-
     }
 
     public void testChangeTextEmpty() {
         mainScrAppium.userInput.sendKeys("     ");
         mainScrAppium.buttonChange.click();
-        Assertions.assertEquals("Привет, UiAutomator!", mainScrAppium.textToBeChanged.getText());
+        Assertions.assertEquals("Hello, UiAutomator!", mainScrAppium.textToBeChanged.getText());
     }
 
     @Test
