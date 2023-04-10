@@ -33,10 +33,11 @@ public class AppiumTest {
         mainScrAppium = new MainScrAppium(driver);
     }
 
+    @Test
     public void testChangeTextEmpty() {
         mainScrAppium.userInput.sendKeys("     ");
         mainScrAppium.buttonChange.click();
-        Assertions.assertEquals("Hello, UiAutomator!", mainScrAppium.textToBeChanged.getText());
+        Assertions.assertEquals("Привет UiAutomator!", mainScrAppium.textToBeChanged.getText());
     }
 
     @Test
