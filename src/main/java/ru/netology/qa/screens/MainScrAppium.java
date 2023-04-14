@@ -16,7 +16,7 @@ public class MainScrAppium {
     @AndroidFindBy(id = "ru.netology.testing.uiautomator:id/buttonChange")
     public MobileElement buttonChange;
 
-    @AndroidFindBy(id = "ru.netology.testing.uiautomator:id/textToBeChanged")
+    @AndroidFindBy(xpath = "ru.netology.testing.uiautomator:id/textToBeChanged")
     public MobileElement textToBeChanged;
 
     @AndroidFindBy(id = "buttonActivity")

@@ -1,5 +1,6 @@
 package ru.netology.qa;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 import java.net.MalformedURLException;
@@ -35,9 +36,10 @@ public class AppiumTest {
 
     @Test
     public void testChangeTextEmpty() {
+        String expected = mainScrAppium.textToBeChanged.getText();
         mainScrAppium.userInput.sendKeys("     ");
         mainScrAppium.buttonChange.click();
-        Assertions.assertEquals("Привет UiAutomator!", mainScrAppium.textToBeChanged.getText());
+        Assertions.assertEquals(expected, mainScrAppium.textToBeChanged.getText());
     }
 
     @Test
